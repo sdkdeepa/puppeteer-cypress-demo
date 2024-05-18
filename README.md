@@ -2,7 +2,7 @@
 This is a for ijs demo
 
 # cypress-puppeteer-plugin-demo
-Sample project to demonstrate the usage of the [`@cypress/puppeteer [beta]`](https://github.com/cypress-io/cypress/tree/develop/npm/puppeteer) plugin.
+Sample project to demonstrate the usage of the [`@cypress/puppeteer[beta]`](https://github.com/cypress-io/cypress/tree/develop/npm/puppeteer) plugin.
 
 ## Pre-requirements
 - Have node installed
