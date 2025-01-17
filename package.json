@@ -16,6 +16,6 @@
   "author": "Deepa Subramanian",
   "devDependencies": {
     "@cypress/puppeteer": "^0.1.2",
-    "cypress": "^13.9.0"
+    "cypress": "^13.12.0"
   }
 }
