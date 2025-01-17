@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Test</title>
+    <style>
+        .dropdown {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .dropdown-item {
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+
+        .dropdown-item:hover {
+            background-color: #f1f1f1;
+        }
+
+        .input-field {
+            padding: 8px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <input data-v-3f2d6a88="" type="text" placeholder="Month" name="b4euwffl5l" autocomplete="b4euwffl5l" required="required" class="input-field" readonly>
+    <div data-v-3f2d6a88="" class="dropdown">
+        <ul data-v-3f2d6a88="" class="dropdown-list">
+            <li data-v-3f2d6a88="" data-value="01" class="dropdown-item"><input data-v-3f2d6a88="" type="text" class="d-none gdd-val-input val-01"><span data-v-3f2d6a88="">Jan</span></li>
+            <li data-v-3f2d6a88="" data-value="02" class="dropdown-item"><input data-v-3f2d6a88="" type="text" class="d-none gdd-val-input val-02"><span data-v-3f2d6a88="">Feb</span></li>
+            <li data-v-3f2d6a88="" data-value="03" class="dropdown-item"><input data-v-3f2d6a88="" type="text" class="d-none gdd-val-input val-03"><span data-v-3f2d6a88="">Mar</span></li>
+            <li data-v-3f2d6a88="" data-value="04" class="dropdown-item"><input data-v-3f2d6a88="" type="text" class="d-none gdd-val-input val-04"><span data-v-3f2d6a88="">Apr</span></li>
+            <li data-v-3f2d6a88="" data-value="05" class="dropdown-item"><input data-v-3f2d6a88="" type="text" class="d-none gdd-val-input val-05"><span data-v-3f2d6a88="">May</span></li>
+            <li data-v-3f2d6a88="" data-value="06" class="dropdown-item"><input data-v-3f2d6a88="" type="text" class="d-none gdd-val-input val-06"><span data-v-3f2d6a88="">Jun</span></li>
+            <li data-v-3f2d6a88="" data-value="07" class="dropdown-item"><input data-v-3f2d6a88="" type="text" class="d-none gdd-val-input val-07"><span data-v-3f2d6a88="">Jul</span></li>
+            <li data-v-3f2d6a88="" data-value="08" class="dropdown-item"><input data-v-3f2d6a88="" type="text" class="d-none gdd-val-input val-08"><span data-v-3f2d6a88="">Aug</span></li>
+            <li data-v-3f2d6a88="" data-value="09" class="dropdown-item"><input data-v-3f2d6a88="" type="text" class="d-none gdd-val-input val-09"><span data-v-3f2d6a88="">Sep</span></li>
+            <li data-v-3f2d6a88="" data-value="10" class="dropdown-item"><input data-v-3f2d6a88="" type="text" class="d-none gdd-val-input val-10"><span data-v-3f2d6a88="">Oct</span></li>
+            <li data-v-3f2d6a88="" data-value="11" class="dropdown-item"><input data-v-3f2d6a88="" type="text" class="d-none gdd-val-input val-11"><span data-v-3f2d6a88="">Nov</span></li>
+            <li data-v-3f2d6a88="" data-value="12" class="dropdown-item"><input data-v-3f2d6a88="" type="text" class="d-none gdd-val-input val-12"><span data-v-3f2d6a88="">Dec</span></li>
+        </ul>
+    </div>
+
+    <script>
+        const inputField = document.querySelector('.input-field');
+        const dropdown = document.querySelector('.dropdown');
+        const dropdownItems = document.querySelectorAll('.dropdown-item');
+
+        inputField.addEventListener('click', () => {
+            dropdown.style.display = 'block';
+        });
+
+        dropdownItems.forEach(item => {
+            item.addEventListener('click', () => {
+                inputField.value = item.dataset.value;
+                dropdown.style.display = 'none';
+            });
+        });
+
+        // Close the dropdown when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!inputField.contains(event.target) && !dropdown.contains(event.target)) {
+                dropdown.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
